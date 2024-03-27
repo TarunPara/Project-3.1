@@ -20,11 +20,11 @@ const taskSchema = mongoose.Schema(
       required: [true, "Please enter a category"],
     },
 
-    userId: {
-      type: mongoose.SchemaTypes.ObjectId,
-      ref: "User",
-      required: true,
-    },
+    // userId: {
+    //   type: mongoose.SchemaTypes.ObjectId,
+    //   ref: "User",
+    //   required: true,
+    // },
   },
   {
     timestamps: true,

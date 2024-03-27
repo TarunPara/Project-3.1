@@ -24,9 +24,7 @@ const envVarsSchema = Joi.object()
     JWT_RESET_PASSWORD_EXPIRATION_MINUTES: Joi.number()
       .default(10)
       .description("minutes after which reset password token expires"),
-    MAILER_SERVICE: Joi.string(),
-    MAILER_USER: Joi.string(),
-    MAILER_PASS: Joi.string(),
+   
   })
   .unknown();
 
