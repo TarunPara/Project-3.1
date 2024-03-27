@@ -1,0 +1,35 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "tasks": [
+    {
+      "title": "rafay",
+      "description": "ajbsjaksjajksajsa",
+      "date": "2024-04-04",
+      "category": "Marketing",
+      "id": 1711366413506
+    },
+    {
+      "title": "ashhad",
+      "description": "fdhdfhdg",
+      "date": "2024-03-29",
+      "category": "Marketing",
+      "id": 1711366532674
+    }
+  ]
+}
