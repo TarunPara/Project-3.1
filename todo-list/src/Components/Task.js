@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-// import { fetchTasks } from "../api/taskApi"
 import Model from "./Model";
 import EditModel from "./EditModel";
 
@@ -107,7 +106,7 @@ export default function Task() {
                   key={post.id}
                   className="flex max-w-xl flex-col items-start justify-between"
                 >
-                  <div className="flex items-center gap-x-4 text-xs">
+                  <div className="flex items-center gap-x-4 text-xs ">
                     <time className="text-gray-500">{post.date}</time>
                     <a
                       href={"/"}
