@@ -1,12 +1,12 @@
 {
-  "name": "sparkle-backend",
+  "name": "todo-backend",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "start": "node index.js",
-    "dev": " nodemon server.js",
-    "build":"npm i",
+    "dev": " nodemon index.js",
+    "build":"yarn",
     "test": "jest -i --colors --verbose --detectOpenHandles",
     "test:watch": "jest -i --watchAll",
     "coverage": "jest -i --coverage",
