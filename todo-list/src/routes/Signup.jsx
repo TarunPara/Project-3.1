@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "../axios/axios";
 import Cookies from "universal-cookie";
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const cookies = new Cookies();
 
@@ -37,7 +37,6 @@ const Signup = () => {
       console.error(error);
       setErrorMessage(error.response.data.message);
     }
-    console.log("Form data:", formData);
   };
 
   return (
@@ -114,12 +113,12 @@ const Signup = () => {
 
         <p className="mt-2 text-center text-sm text-gray-600">
           Already have an account?{" "}
-          <a
-            href="#"
+          <Link
+            to="signup"
             className="font-medium text-indigo-600 hover:text-indigo-500"
           >
             Login
-          </a>
+          </Link>
         </p>
       </div>
     </div>

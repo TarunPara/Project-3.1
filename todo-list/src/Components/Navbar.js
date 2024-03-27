@@ -4,6 +4,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 import Cookies from "universal-cookie";
 import axios from "../axios/axios";
+import { Link } from "react-router-dom";
 
 const cookies = new Cookies();
 
@@ -20,6 +21,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   const user = cookies.get("user");
+
   const logout = () => {
     console.log(user);
     axios
@@ -34,10 +36,10 @@ export default function Navbar() {
       });
   };
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-black">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div className="mx-auto container px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -59,8 +61,7 @@ export default function Navbar() {
                     alt="Your Company"
                   />
                 </div>
-                {user &
-                (
+                {user && (
                   <div className="hidden sm:ml-6 sm:block">
                     <div className="flex space-x-4">
                       {navigation.map((item) => (
@@ -84,12 +85,16 @@ export default function Navbar() {
               </div>
               {!user ? (
                 <>
-                  <button className="text-white  px-5 py-2 rounded-md  font-semibold">
-                    Login
-                  </button>
-                  <button className="bg-white px-3 py-2 rounded-md  font-semibold">
-                    Sign Up
-                  </button>
+                  <Link to="/">
+                    <button className="text-white  px-5 py-2 rounded-md  font-semibold">
+                      Login
+                    </button>
+                  </Link>
+                  <Link to="/signup">
+                    <button className="bg-white px-3 py-2 rounded-md  font-semibold">
+                      Sign Up
+                    </button>
+                  </Link>
                 </>
               ) : (
                 <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -156,9 +161,9 @@ export default function Navbar() {
                             <span
                               className={classNames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
+                                "block px-4 py-2 text-sm text-gray-700 cursor-pointer"
                               )}
-                              conClick={logout}
+                              onClick={logout}
                             >
                               Sign out
                             </span>
