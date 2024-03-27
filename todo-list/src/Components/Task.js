@@ -89,7 +89,7 @@ export default function Task() {
         {/* <h1 className="">Asshad</h1> */}
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl ">
               My Tasks
             </h2>
             <button
@@ -104,7 +104,7 @@ export default function Task() {
               tasks.map((post) => (
                 <article
                   key={post.id}
-                  className="flex max-w-xl flex-col items-start justify-between"
+                  className="flex max-w-xl flex-col items-start justify-between shadow-md p-4"
                 >
                   <div className="flex items-center gap-x-4 text-xs ">
                     <time className="text-gray-500">{post.date}</time>
@@ -127,14 +127,14 @@ export default function Task() {
                   <div className="relative mt-8 flex items-center gap-x-4">
                     <div>
                       <i
-                        className="fa-solid fa-trash"
+                        className="fa-solid fa-trash cursor-pointer"
                         style={{ color: "#dd1313" }}
                         onClick={() => deleteTask(post.id)}
                       ></i>
                     </div>
                     <div>
                       <i
-                        className="fa-solid fa-pen-to-square"
+                        className="fa-solid fa-pen-to-square cursor-pointer"
                         style={{ color: "#0156e9" }}
                         onClick={() => handleEdit(post.id)}
                       ></i>
