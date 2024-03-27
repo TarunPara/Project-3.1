@@ -38,6 +38,8 @@ app.use(compression());
 // enable cors
 app.use(cors("*"));
 app.options("*", cors());
+// app.use(cors({credentials: true, origin: 'http://localhost:5000'}));
+
 
 app.use(express.static("uploads"));
 

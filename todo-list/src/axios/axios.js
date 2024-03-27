@@ -6,7 +6,7 @@ const user = cookies.get("user");
 const API = axios.create({
   // baseURL: "http://localhost:5000/v1",
   baseURL: "https://project-3-1.onrender.com/v1",
-  withCredentials: true,
+  // withCredentials: false,
 
   headers: { Authorization: `Bearer ${user?.tokens?.access?.token}` },
 });
