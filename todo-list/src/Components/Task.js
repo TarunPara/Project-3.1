@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import axios from "../axios/axios";
 import Model from "./Model";
 import EditModel from "./EditModel";
 
 export default function Task() {
   const fetchTasks = () => {
     axios
-      .get("http://localhost:5000/v1/tasks")
+      .get("/tasks")
       .then((res) => {
         console.log(res);
         setTasks(res.data);
@@ -19,7 +19,7 @@ export default function Task() {
   };
   function addTask(task) {
     axios
-      .post("http://localhost:5000/v1/tasks", task)
+      .post("/tasks", task)
       .then((res) => {
         console.log("Task added successfully", res);
         fetchTasks();
@@ -30,7 +30,7 @@ export default function Task() {
   }
   function editTask(taskId, taskUpdates) {
     axios
-      .put(`http://localhost:5000/v1/tasks/${taskId}`, taskUpdates)
+      .put(`/tasks/${taskId}`, taskUpdates)
       .then((res) => {
         console.log("Task updated successfully", res);
         fetchTasks();
@@ -73,7 +73,7 @@ export default function Task() {
 
   function deleteTask(taskId) {
     axios
-      .delete(`http://localhost:5000/v1/tasks/${taskId}`)
+      .delete(`/tasks/${taskId}`)
       .then((res) => {
         console.log("Task deleted successfully", res);
         fetchTasks();
