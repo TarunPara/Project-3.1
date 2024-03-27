@@ -64,7 +64,7 @@ export default function Navbar() {
                 {user && (
                   <div className="hidden sm:ml-6 sm:block">
                     <div className="flex space-x-4">
-                      {navigation.map((item) => (
+                      {/* {navigation.map((item) => (
                         <a
                           key={item.name}
                           href={item.href}
@@ -78,7 +78,16 @@ export default function Navbar() {
                         >
                           {item.name}
                         </a>
-                      ))}
+                      ))} */}
+                      <Link to="/task" className=" text-white">
+                        Dashboard
+                      </Link>{" "}
+                      <Link to="/team" className=" text-white">
+                        Teams
+                      </Link>{" "}
+                      <Link to="/team" className=" text-white">
+                        Calendar
+                      </Link>
                     </div>
                   </div>
                 )}

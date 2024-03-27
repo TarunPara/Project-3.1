@@ -5,6 +5,8 @@ import Footer from "./Components/Footer";
 import { Route, Routes } from "react-router-dom";
 import Signup from "./routes/Signup";
 import Login from "./routes/Login";
+import Team from "./routes/Team";
+import NotFound from "./routes/NotFound";
 
 function App() {
   return (
@@ -14,7 +16,8 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/task" element={<Task />} />
-        <Route path="*" element={<h1>Page Not Found</h1>} />
+        <Route path="/team" element={<Team />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       <Footer />
