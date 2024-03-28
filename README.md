@@ -21,7 +21,8 @@ To get a local copy up and running, follow these simple steps.
 
 1. Clone the repository:
    ```sh
-   git clone https://your-repository-link-here.git
+   git clone https://github.com/TarunPara/Project-3.1
+
 Navigate to the app's directory:
 sh
 Copy code
